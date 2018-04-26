@@ -1,0 +1,37 @@
+java 8 特性
+
+A.lambda 表达式
+1.lambda 概念
+  lambda表达式是JAVA8中提供的一种新的特性，它支持JAVA也能进行简单的“函数式编程”。 
+  它是一个匿名函数，Lambda表达式基于数学中的λ演算得名，直接对应于其中的lambda抽象(lambda abstraction)，是一个匿名函数，即没有函数名的函数。
+2.写法、规则
+  基本语法: 
+  (parameters) -> expression 或 (parameters) ->{ statements; } 
+  即: 参数 -> 带返回值的表达式/无返回值的陈述
+  例子:
+    //1. 接收2个int型整数,返回他们的和
+    (int x, int y) -> x + y;
+    //2. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void)
+    (String s) -> System.out.print(s);
+  
+ 
+
+
+
+B.stream
+1.stream 概念 
+  简单来讲，stream就是JAVA8提供给我们的对于元素集合统一、快速、并行操作的一种方式。 
+  它能充分运用多核的优势，以及配合lambda表达式、链式结构对集合等进行许多有用的操作。
+  可以支持顺序和并行对元素操作的元素集合。
+2.作用： 
+  提供了一种操作大数据接口，让数据操作更容易和更快 
+  使用stream，我们能够对collection的元素进行过滤、映射、排序、去重等许多操作。
+3.例子
+  .Filter（过滤）
+  .Map(对元素进行操作)
+  .limit(截断) 
+  .distinct(去重) 
+  .count(统计) 
+  .Collect(收集流的结果) 
+ 
+  
