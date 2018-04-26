@@ -1,19 +1,30 @@
+package com.ald.fanbei.admin.web.controller.testLambda;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class lambda {
+
+    public void test(){
+        List<Person> list = new ArrayList<Person>();
+
+        Person person1 = new Person("满福",18);
+        Person person2 = new Person("福满多",51);
+        Person person3 = new Person("高富帅",31);
+
+        List<String> studentList = list.stream().filter(item->item.getAge()>18)
+                                                .sorted(Comparator.comparing(Person::getAge).reversed())
+                                                .map(Person::getName)
+                                                .collect(Collectors.toList());
+
+        System.out.println(studentList);
 
 
 
 
-public void Test(){
+    }
 
-  List<Item> list = new ArrayList<Item>();
-  PersonDo item1 = new Item("it1", 1);  
-  PersonDo item2 = new Item("it2", 2);  
-  PersonDo item3 = new Item("it3", 3); 
-  
-  list.add(item1);
-  list.add(item2);
-  list.add(item3);
-  
-  list.stream().filter(()->item.age()>2);
-  
 
 }
