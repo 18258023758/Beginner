@@ -6,26 +6,14 @@ package com.lambda.usebean;
  * @author MingChenchen
  *
  */
- 
+@Getter
+@Setter
 public class Person {
     private String name;      //姓名
-    private String location;  //地址
+    private int age;  //岁数
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getLocation() {
-        return location;
-    }
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public Item(String name, String location) {  
+    public Item(String name, int age) {  
         this.name = name;  
-        this.location = location;  
+        this.age = age;  
     }  
 }
