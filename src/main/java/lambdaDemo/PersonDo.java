@@ -24,9 +24,8 @@ public class Person {
         this.location = location;
     }
 
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return "Person:" + name + "," + location;
-    }
+    public Item(String name, String location) {  
+        this.name = name;  
+        this.location = location;  
+    }  
 }
